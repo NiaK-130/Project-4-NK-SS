@@ -34,7 +34,7 @@ class StudentsController < ApplicationController
    private
 
    def student_params
-    params.permit(:name, :email, :home_address, :gpa, :reading_level, :writing_level, :math_level, :teacher_id)
+    params.permit(:name, :image, :email, :home_address, :gpa, :reading_level, :writing_level, :math_level, :teacher_id)
    end
 
 

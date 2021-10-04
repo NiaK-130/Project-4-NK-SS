@@ -2,13 +2,13 @@
 
 puts "Seeding teachers..."
 teacher1 = Teacher.create(name: 'Ms. Caitlin', grade_level: '9th Grade')
-teacher2 = Teacher.create(name: 'Ms. Lizzie', grade_level: '6th Grade')
+teacher2 = Teacher.create(name: 'Ms. Lizzie', grade_level: '10th Grade')
 teacher3 = Teacher.create(name: 'Mr. Tom', grade_level: '12th Grade')
 
 
 
 puts "Seeding students..."
-student1 = Student.create(name: 'Morgan Smith', email: 'msmith@westvalley.org', home_address: '1256 Jennings Street San Jose, CA 93174',  gpa: 3.8, reading_level: 'Above grade level', writing_level: 'Above grade level', math_level: 'Above grade level', teacher_id: teacher1.id)
+student1 = Student.create(name: 'Morgan Smith', image:"./Images/Morgan_Smith-gr-9.png", email: 'msmith@westvalley.org', home_address: '1256 Jennings Street San Jose, CA 93174',  gpa: 3.8, reading_level: 'Above grade level', writing_level: 'Above grade level', math_level: 'Above grade level', teacher_id: teacher1.id)
 
 student2 = Student.create(name: 'Josh Johnson', email: 'jjohnson@westvalley.org', home_address: '159 Amherst Drive San Jose, CA 93173',  gpa: 3.0, reading_level: 'At grade level', writing_level: 'Below grade level', math_level: 'Above grade level', teacher_id: teacher1.id)
 

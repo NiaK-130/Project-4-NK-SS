@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2021_10_04_190505) do
 
   create_table "students", force: :cascade do |t|
     t.string "name"
+    t.string "image"
     t.string "email"
     t.string "home_address"
     t.integer "gpa"
