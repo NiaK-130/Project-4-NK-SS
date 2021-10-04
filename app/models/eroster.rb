@@ -1,0 +1,2 @@
+class Eroster < ApplicationRecord
+end
