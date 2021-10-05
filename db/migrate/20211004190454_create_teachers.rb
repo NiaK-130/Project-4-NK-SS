@@ -3,6 +3,8 @@ class CreateTeachers < ActiveRecord::Migration[6.1]
     create_table :teachers do |t|
       t.string :name
       t.string :grade_level
+      t.string :username
+      t.string :password_digest
 
       t.timestamps
     end

@@ -38,6 +38,8 @@ ActiveRecord::Schema.define(version: 2021_10_04_190505) do
   create_table "teachers", force: :cascade do |t|
     t.string "name"
     t.string "grade_level"
+    t.string "username"
+    t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
