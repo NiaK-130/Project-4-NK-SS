@@ -26,6 +26,9 @@ function SignUp({ setTeacher }) {
 
   return (
     <div>
+        <div>
+            <img className = "sign-up-img" src = "./Images/Logo.png" alt = "e-marker-logo"/>
+        </div>
       <form onSubmit={handleSubmit}>
         <h1>Sign Up</h1>
         <label htmlFor="username">Username</label>

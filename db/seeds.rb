@@ -1,9 +1,7 @@
-
-
 puts "Seeding teachers..."
-teacher1 = Teacher.create(name: 'Ms. Caitlin', grade_level: '9th Grade', username: 'mscaitlin', password_digest: '9thgrade')
-teacher2 = Teacher.create(name: 'Ms. Lizzie', grade_level: '10th Grade' , username: 'mslizzie', password_digest: '10thgrade')
-teacher3 = Teacher.create(name: 'Mr. Tom', grade_level: '12th Grade', username: 'mrtom', password_digest: '12thgrade')
+teacher1 = Teacher.create(name: 'Ms. Caitlin', grade_level: '9th Grade', username: 'mscaitlin', password: '9thgrade')
+teacher2 = Teacher.create(name: 'Ms. Lizzie', grade_level: '10th Grade' , username: 'mslizzie', password: '10thgrade')
+teacher3 = Teacher.create(name: 'Mr. Tom', grade_level: '12th Grade', username: 'mrtom', password: '12thgrade')
 
 
 

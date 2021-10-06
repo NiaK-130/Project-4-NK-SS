@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { Switch, Route } from "react-router-dom";
+import {Route, BrowserRouter as Router, Switch, NavLink } from "react-router-dom";
 import SignUp from "./SignUp";
 import Login from "./Login";
 import NavBar from "./NavBar";
 import Home from "./Home";
+import Students from "./Students"
 
 function App() {
-  const [teacher, setTeacher] = useState(null);
+  const [teacher, setTeacher] = useState([]);
 
   useEffect(() => {
     // auto-login
@@ -18,16 +19,28 @@ function App() {
   }, []);
 
   return (
-    <>
+    <Router>
+
       <NavBar teacher={teacher} setTeacher={setTeacher} />
+      
+      
       <main>
         {teacher ? (
+          <div>
           <Switch>
+          
             <Route path="/">
               <Home teacher={teacher}/>
+              <NavLink className="nav-bar-b" to="/students"> Students</NavLink>
+            </Route>
+            
+            <Route exact path="/students">
+              <Students students = {teacher.students} teacher = {teacher}/>
             </Route>
           </Switch>
+          </div>
         ) : (
+          <div>
           <Switch>
             <Route path="/signup">
               <SignUp setTeacher={setTeacher} />
@@ -39,9 +52,10 @@ function App() {
               <Home />
             </Route>
           </Switch>
+          </div>
         )}
       </main>
-    </>
+    </Router>
   );
 }
 

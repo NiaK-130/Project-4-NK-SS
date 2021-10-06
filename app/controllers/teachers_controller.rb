@@ -19,6 +19,9 @@ end
     private
 
     def authorize
+        puts "---------"
+        puts session 
+        
         return render json: { error: "Not authorized" }, status: :unauthorized unless session.include? :teacher_id
       end
   

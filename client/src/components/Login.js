@@ -21,8 +21,11 @@ function Login({ setTeacher }) {
 
   return (
     <div>
+        <div>
+            <img className = "login-img" src = "./Images/Logo.png" alt = "e-marker-logo"/>
+        </div>
       <form onSubmit={handleSubmit}>
-        <h1>Login</h1>
+        <h1 className = "login-name">Login</h1>
         <label htmlFor="username">Username</label>
         <input
           type="text"
