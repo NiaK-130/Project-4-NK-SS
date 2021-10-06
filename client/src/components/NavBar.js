@@ -11,13 +11,18 @@ function NavBar({ teacher, setTeacher }) {
   }
 
   return (
-    <header>
-      <div>
+    <div className = "header">
+      <div className = "home-header">
         <Link to="/">Home</Link>
       </div>
-      <div>
+      <div className = "login-signup-header">
         {teacher ? (
-          <button onClick={handleLogoutClick}>Logout</button>
+            <div>
+                <Link to="/students">Students</Link> 
+                <button onClick={handleLogoutClick}>Logout</button> 
+            </div>
+          
+
         ) : (
           <>
             <Link to="/signup">Signup</Link>
@@ -25,7 +30,7 @@ function NavBar({ teacher, setTeacher }) {
           </>
         )}
       </div>
-    </header>
+    </div>
   );
 }
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {Route, BrowserRouter as Router, Switch, NavLink } from "react-router-dom";
+import {Route, BrowserRouter as Router, Switch} from "react-router-dom";
 import SignUp from "./SignUp";
 import Login from "./Login";
 import NavBar from "./NavBar";
@@ -7,10 +7,9 @@ import Home from "./Home";
 import Students from "./Students"
 
 function App() {
-  const [teacher, setTeacher] = useState([]);
+  const [teacher, setTeacher] = useState('');
 
   useEffect(() => {
-    // auto-login
     fetch("/me").then((r) => {
       if (r.ok) {
         r.json().then((teacher) => setTeacher(teacher));
@@ -31,11 +30,10 @@ function App() {
           
             <Route path="/">
               <Home teacher={teacher}/>
-              <NavLink className="nav-bar-b" to="/students"> Students</NavLink>
             </Route>
             
             <Route exact path="/students">
-              <Students students = {teacher.students} teacher = {teacher}/>
+              <Students students= {teacher.students} teacher={teacher}/>
             </Route>
           </Switch>
           </div>
