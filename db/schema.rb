@@ -34,6 +34,10 @@ ActiveRecord::Schema.define(version: 2021_10_04_190505) do
     t.string "grade_level"
     t.string "username"
     t.string "password_digest"
+    t.string "image_link"
+    t.string "lesson_plan"
+    t.string "reminders"
+    t.string "additional_image1"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

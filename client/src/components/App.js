@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {Route, BrowserRouter as Router, Switch} from "react-router-dom";
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import SignUp from "./SignUp";
 import Login from "./Login";
 import NavBar from "./NavBar";
@@ -7,49 +7,92 @@ import Home from "./Home";
 import Students from "./Students"
 
 function App() {
-  const [teacher, setTeacher] = useState('');
+  const [teacher, setTeacher] = useState({});
+  const [students, setStudents] = useState([]);
 
   useEffect(() => {
     fetch("/me").then((r) => {
       if (r.ok) {
-        r.json().then((teacher) => setTeacher(teacher));
+        r.json().then((teacher) => { setStudents(teacher.students); setTeacher(teacher) });
       }
     });
   }, []);
+
+  function deleteStudent(studentToDelete) {
+
+
+    fetch(`students/${studentToDelete}`, {
+      method: "DELETE",
+    })
+      .then(() => setStudents(students.filter(student => student.id !== studentToDelete)));
+  }
+
+
+  function addStudent(image, name, email, homeAddress, gpa, readingLevel, writingLevel, mathLevel) {
+
+    fetch(`/students`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        image: `${image}`,
+        name: `${name}`,
+        email: `${email}`,
+        home_address: `${homeAddress}`,
+        gpa: `${gpa}`,
+        reading_level: `${readingLevel}`,
+        writing_level: `${writingLevel}`,
+        math_level: `${mathLevel}`,
+        teacher_id: `${teacher.id}`
+      }),
+
+
+
+    })
+      .then((r) => r.json())
+      .then(student => {
+        setStudents([...students, student])
+
+        console.log(student)
+
+      });
+  }
 
   return (
     <Router>
 
       <NavBar teacher={teacher} setTeacher={setTeacher} />
-      
-      
+
       <main>
         {teacher ? (
           <div>
-          <Switch>
-          
-            <Route path="/">
-              <Home teacher={teacher}/>
-            </Route>
-            
-            <Route exact path="/students">
-              <Students students= {teacher.students} teacher={teacher}/>
-            </Route>
-          </Switch>
+            <Switch>
+
+              <Route exact path="/">
+                <Home teacher={teacher} />
+              </Route>
+
+              <Route exact path="/students">
+                <Students teacher={teacher} students={students} deleteStudent={deleteStudent} addStudent ={addStudent}/>
+
+              </Route>
+            </Switch>
+
           </div>
         ) : (
           <div>
-          <Switch>
-            <Route path="/signup">
-              <SignUp setTeacher={setTeacher} />
-            </Route>
-            <Route path="/login">
-              <Login setTeacher={setTeacher} />
-            </Route>
-            <Route path="/">
-              <Home />
-            </Route>
-          </Switch>
+            <Switch>
+              <Route path="/signup">
+                <SignUp setTeacher={setTeacher} />
+              </Route>
+              <Route path="/login">
+                <Login setTeacher={setTeacher} />
+              </Route>
+              <Route path="/">
+                <Home />
+              </Route>
+            </Switch>
           </div>
         )}
       </main>
@@ -77,7 +120,7 @@ export default App;
 
 //   const [teachers, setTeachers] = useState([])
 //   const [students, setStudents] = useState([])
-  
+
 
 //   useEffect(() => {
 //     fetch('/teachers')
@@ -90,8 +133,8 @@ export default App;
 //   return (
 //     <div className="App">
 //       <header className="App-header">
-     
-        
+
+
 //       </header>
 //     </div>
 //   );

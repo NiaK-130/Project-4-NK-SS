@@ -145,3 +145,93 @@ form button[type="submit"] {
 
 }
 
+.home-page-desc{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-top: 100px;
+  margin-left: 32%;
+  font-weight: normal;
+  font-size: 17px;
+  
+}
+
+.mid-text {
+  margin-top: 4%;
+  width: 32%;
+  font-weight: lighter;
+  margin-left: 630px;
+  font-stretch: wider;
+  color: rgb(27, 26, 26);
+  letter-spacing: 2px;
+  line-height: 16pt
+  
+ }
+
+ .footer-text{
+  margin-top:13%;
+  font-size: medium;
+  font-stretch: narrower;
+  cursor: pointer;
+  font-weight: lighter;
+  font-stretch: semi-expanded;
+  color: rgb(20, 19, 19);
+  margin-left: 38%;
+  
+}
+
+
+.reminders-block{
+  margin-left: 390px;
+  margin-top:-200px;
+  width: 450px; 
+  height: 170px; 
+  background-color: rgb(249, 252, 210);
+  padding: 1rem;
+  text-align: left;
+  box-shadow: 0px 13px 10px black;
+  transform: rotate(0deg);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  
+}
+
+.lesson-plan-block{
+  width:100%; 
+  min-height:100%;
+  margin:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  background:#F0F0D8;
+
+  /* margin-left:1200px; */
+  /* margin-top:-310px;
+  box-shadow: rgba(164, 164, 230, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  width: 500px; 
+  height: 89px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: left;
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  height: 100px;
+  width:350px;
+  margin-left:1000px;
+  margin-top:-250px;
+  overflow: hidden;
+  font-size: 18px;
+ 
+  padding: 2rem 1rem;
+  background: #f1f1eb33;
+ 
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+
+}
+
+.additional-image-block {
+  margin-top: 150px;
+  width: 150px; 
+  height: 170px; 
+
+
+
+}

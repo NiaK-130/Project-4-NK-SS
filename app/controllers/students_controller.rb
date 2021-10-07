@@ -15,8 +15,14 @@ class StudentsController < ApplicationController
 
     
       def create
-        recipe = @current_teacher.students.create!(student_params)
+        student = Student.create!(student_params)
         render json: student, status: :created
+      end
+
+      def destroy
+        student = Student.find(params[:id])
+            student.destroy
+            head :no_content
       end
     
       private
@@ -24,6 +30,9 @@ class StudentsController < ApplicationController
       def student_params
         params.permit(:name, :image, :email, :home_address, :gpa, :reading_level, :writing_level, :math_level, :teacher_id)
       end
+
+    end
+
 
 
 
@@ -70,4 +79,3 @@ class StudentsController < ApplicationController
 #    end
 
 
-end

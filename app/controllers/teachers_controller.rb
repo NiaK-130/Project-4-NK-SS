@@ -13,14 +13,14 @@ end
   
     def show
         teacher = Teacher.find_by(id: session[:teacher_id])
-        render json: teacher
+        render json: teacher, include: :students
     end
   
     private
 
     def authorize
-        puts "---------"
-        puts session 
+        # puts "---------"
+        # puts session 
         
         return render json: { error: "Not authorized" }, status: :unauthorized unless session.include? :teacher_id
       end
@@ -29,15 +29,5 @@ end
       params.permit(:username, :password, :password_confirmation, :name, :grade_level)
     end
 
-
-    # def index
-    #     teachers = Teacher.all
-    #     render json: teachers
-    # end
-
-    # def show 
-    #     teacher = Teacher.find_by(id: params[:id])
-    #     render json: teacher
-    # end 
 
 end

@@ -6,9 +6,9 @@ Rails.application.routes.draw do
   post "/signup", to: "teachers#create"
   get "/me", to: "teachers#show"
 
-  resources :teachers, only: [:show, :create]
-  resources :students, only: [:index, :show, :create]
+  resources :teachers
+  resources :students, only: [:index, :show, :create, :destroy]
 
   
-
+  # resources :teachers, only: [:show, :create]
 end
