@@ -18,13 +18,13 @@ teacher3 = Teacher.create(name: 'Mr. Tom', grade_level: '12th Grade', username: 
 puts "Seeding students..."
 student1 = Student.create(name: 'Morgan Smith', image:"../images/Morgan_Smith-gr-9.png", email: 'msmith@westvalley.org', home_address: '1256 Jennings Street San Jose, CA 93174',  gpa: 3.8, reading_level: 'Above grade level', writing_level: 'Above grade level', math_level: 'Above grade level', teacher_id: teacher1.id)
 
-student2 = Student.create(name: 'Josh Johnson', email: 'jjohnson@westvalley.org', home_address: '159 Amherst Drive San Jose, CA 93173',  gpa: 3.0, reading_level: 'At grade level', writing_level: 'Below grade level', math_level: 'Above grade level', teacher_id: teacher1.id)
+student2 = Student.create(name: 'Josh Johnson', image:"../images/Josh_Johnson-gr-9.png",email: 'jjohnson@westvalley.org', home_address: '159 Amherst Drive San Jose, CA 93173',  gpa: 3.0, reading_level: 'At grade level', writing_level: 'Below grade level', math_level: 'Above grade level', teacher_id: teacher1.id)
 
-student3 = Student.create(name: 'Julia Rogers', email: 'jrogers@westvalley.org', home_address: '532 Pier Street San Jose, CA 93174',  gpa: 2.5, reading_level: 'Below grade level', writing_level: 'At grade level', math_level: 'At grade level', teacher_id: teacher1.id)
+student3 = Student.create(name: 'Julia Rogers', image:"../images/Julia_Rogers-gr-9.png", email: 'jrogers@westvalley.org', home_address: '532 Pier Street San Jose, CA 93174',  gpa: 2.5, reading_level: 'Below grade level', writing_level: 'At grade level', math_level: 'At grade level', teacher_id: teacher1.id)
 
-student4 = Student.create(name: 'Aaron Walter', email: 'awalter@westvalley.org', home_address: '8247 Alton Drive San Jose, CA 93172',  gpa: 4.0, reading_level: 'Above grade level', writing_level: 'Above grade level', math_level: 'Above grade level', teacher_id: teacher1.id)
+student4 = Student.create(name: 'Aaron Walter', image:"../images/Aaron_Walter-gr-9.png", email: 'awalter@westvalley.org', home_address: '8247 Alton Drive San Jose, CA 93172',  gpa: 4.0, reading_level: 'Above grade level', writing_level: 'Above grade level', math_level: 'Above grade level', teacher_id: teacher1.id)
 
-student5 = Student.create(name: 'Devonte Adams', email: 'dadams@westvalley.org', home_address: '9109 Galvin Avenue San Jose, CA 93173',  gpa: 3.2, reading_level: 'Above grade level', writing_level: 'Above grade level', math_level: 'At grade level', teacher_id: teacher1.id)
+student5 = Student.create(name: 'Devonte Adams', image:"../images/Devonte_Adams-gr-9.png", email: 'dadams@westvalley.org', home_address: '9109 Galvin Avenue San Jose, CA 93173',  gpa: 3.2, reading_level: 'Above grade level', writing_level: 'Above grade level', math_level: 'At grade level', teacher_id: teacher1.id)
 
 student6 = Student.create(name: 'Matthew Kelly', email: 'mkelly@westvalley.org', home_address: '730 Pegshop Avenue San Jose, CA 93184',  gpa: 2.3, reading_level: 'Below grade level', writing_level: 'Below grade level', math_level: 'At grade level', teacher_id: teacher2.id)
 
