@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import NewStudentForm from './NewStudentForm'
 import StudentDisplay from './StudentDisplay'
 export default function Students({ teacher, students, deleteStudent, addStudent }) {
@@ -12,8 +12,6 @@ console.log(teacher)
         e.preventDefault()
         openCloseForm(!form)
     }
-
-  
 
 
     return (
