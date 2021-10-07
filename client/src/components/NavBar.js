@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function NavBar({ teacher, setTeacher }) {
   function handleLogoutClick() {
-    fetch("/logout", { method: "DELETE" }).then((r) => {
+    fetch("/api/logout", { method: "DELETE" }).then((r) => {
       if (r.ok) {
         setTeacher(null);
       }

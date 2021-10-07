@@ -1,3 +1,6 @@
+import React from "react";
+
+
 function Home({ teacher }) {
 
     if (teacher) {

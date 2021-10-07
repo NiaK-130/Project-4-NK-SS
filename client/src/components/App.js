@@ -6,12 +6,12 @@ import NavBar from "./NavBar";
 import Home from "./Home";
 import Students from "./Students"
 
-function App() {
+function AuthenticatedApp() {
   const [teacher, setTeacher] = useState({});
   const [students, setStudents] = useState([]);
 
   useEffect(() => {
-    fetch("/me").then((r) => {
+    fetch("/api/me").then((r) => {
       if (r.ok) {
         r.json().then((teacher) => { setStudents(teacher.students); setTeacher(teacher) });
       }
@@ -21,7 +21,7 @@ function App() {
   function deleteStudent(studentToDelete) {
 
 
-    fetch(`students/${studentToDelete}`, {
+    fetch(`/api/students/${studentToDelete}`, {
       method: "DELETE",
     })
       .then(() => setStudents(students.filter(student => student.id !== studentToDelete)));
@@ -30,7 +30,7 @@ function App() {
 
   function addStudent(image, name, email, homeAddress, gpa, readingLevel, writingLevel, mathLevel) {
 
-    fetch(`/students`, {
+    fetch(`/api/students`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -101,7 +101,7 @@ function App() {
 }
 
 
-export default App;
+export default AuthenticatedApp;
 
 
 
