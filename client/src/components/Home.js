@@ -24,6 +24,10 @@ function Home({ teacher }) {
 
                     <div className = "additional-image-block">
                     <img className = "additional-image" src={teacher.additional_image1} alt="additionalimage"/>
+                    <img className = "additional-image" src={teacher.additional_image1} alt="additionalimage"/>
+                    <img className = "additional-image" src={teacher.additional_image1} alt="additionalimage"/>
+                    <img className = "additional-image" src={teacher.additional_image1} alt="additionalimage"/>
+                    <img className = "additional-image" src={teacher.additional_image1} alt="additionalimage"/>
                     </div>
 
                 </div>
@@ -32,7 +36,7 @@ function Home({ teacher }) {
     } else {
       return <div>
             <img className = "logo-img" src = "./Images/Logo.png" alt = "e-marker-logo"/>
-            <h4 className = "home-page-desc"> The number one online platform for teachers to track students progress and activities   </h4> 
+            <h5 className = "home-page-desc"> The number one online platform for teachers to track students progress and activities   </h5> 
             <h5 className = "footer-text">Terms & Conditions   |    Privacy Policy    |    Notice of Privacy Practices    |    Consents  </h5>
 
         </div>

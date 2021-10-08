@@ -7,17 +7,19 @@ export default function StudentDisplay({student, deleteStudent}) {
     }
 
     return (
-        <div >
+        <div className = "student-display-container" >
             <img className = "student-image" src={student.image} alt={student.image}/>
+            <div className = "student-info">
             <h2>{student.name}</h2>
-            <h4>Email: </h4> {student.email}
-            <h4>Home Address: </h4> {student.home_address}
-            <h4>GPA: </h4> {student.gpa} 
-            <h4>Reading Level: </h4> {student.reading_level} 
-            <h4>Writing Level: </h4> {student.writing_level} 
-            <h4>Math Level: </h4> {student.math_level} 
+            <h4 className = "student-display-text" >Email: {student.email} </h4> 
+            <h4 className = "student-display-text">Home Address: {student.home_address} </h4> 
+            <h4 className = "student-display-text">GPA: {student.gpa} </h4>  
+            <h4 className = "student-display-text">Reading Level: {student.reading_level} </h4> 
+            <h4 className = "student-display-text">Writing Level: {student.writing_level}  </h4> 
+            <h4 className = "student-display-text">Math Level: {student.math_level} </h4> 
+            </div>
             <div > 
-            <button onClick={handleClick}>Remove Student</button>
+            <button className = "remove-Student-Button" onClick={handleClick}>Remove Student</button>
             </div> 
         </div>
     )

@@ -68,7 +68,6 @@ function AuthenticatedApp() {
         {teacher ? (
           <div>
             <Switch>
-
               <Route exact path="/">
                 <Home teacher={teacher} />
               </Route>

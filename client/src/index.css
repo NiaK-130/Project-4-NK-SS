@@ -16,6 +16,7 @@ code {
 .logo-img{
   width: 22%;
   margin-left: 40%;
+  margin-top:70px;
 
   
 }
@@ -30,14 +31,14 @@ code {
 
 .header a,
 .header button {
-  font-size: 1rem;
+  font-size: 1.2rem;
   display: inline-block;
-  background-color: #f8f8f8;
+  background-color: #0a0a0a;
   border: 1px solid rgb(24, 23, 23);
   margin: 1rem;
   padding: 1rem;
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   cursor: pointer;
   border-radius: .5rem;
 }
@@ -155,9 +156,9 @@ form button[type="submit"] {
 }
 
 .mid-text {
-  margin-top: 4%;
+  margin-top: -60px;
   width: 32%;
-  font-weight: lighter;
+  font-weight: lighter ;
   margin-left: 630px;
   font-stretch: wider;
   color: rgb(27, 26, 26);
@@ -175,33 +176,42 @@ form button[type="submit"] {
   font-stretch: semi-expanded;
   color: rgb(20, 19, 19);
   margin-left: 38%;
+  font-stretch:wider;
   
+}
+
+.teacher-image{
+  width:50%;
+  height:30%;
 }
 
 
 .reminders-block{
-  margin-left: 390px;
-  margin-top:-200px;
+  margin-left: 990px;
+  margin-top:-520px;
   width: 450px; 
-  height: 170px; 
+  height: 470px; 
   background-color: rgb(249, 252, 210);
   padding: 1rem;
   text-align: left;
   box-shadow: 0px 13px 10px black;
-  transform: rotate(0deg);
+  /* transform: rotate(0deg); */
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
   
 }
 
 .lesson-plan-block{
-  width:100%; 
-  min-height:100%;
-  margin:0;
-  display:flex;
+  width:97%; 
+  height:200px;
+  /* display:flex;
   flex-direction:column;
-  justify-content:center;
+  justify-content:center; */
   background:#F0F0D8;
+  margin-top: 70px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 1rem;
+  text-align: left;
 
   /* margin-left:1200px; */
   /* margin-top:-310px;
@@ -228,10 +238,72 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
 }
 
 .additional-image-block {
-  margin-top: 150px;
+  /* margin-top: 150px;
   width: 150px; 
-  height: 170px; 
+  height: 170px;  */
+
+}
+
+.additional-image{
+  height: 30%;
+  width: 20%;
+
+}
+
+.student-image{
+  height: 30%;
+  width:20%;
+
+}
+
+.add-student-button{
+
+  font-size: 1rem;
+  display: inline-block;
+  background-color: #030303;
+  border: 1px solid rgb(24, 23, 23);
+  padding: 1rem;
+  text-decoration: none;
+  color: rgb(255, 254, 254);
+  cursor: pointer;
+  border-radius: .5rem;
+  margin-left:69%;
+  margin-top: -118px;
+  height: 30%;
+  width:11%;
+
+}
+
+.remove-Student-Button{
+
+  font-size: 1rem;
+  display: inline-block;
+  background-color: #303030;
+  border: 1px solid rgb(24, 23, 23);
+  margin: 1rem;
+  padding: 1rem;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  border-radius: .5rem;
+  
+}
 
 
+.student-info{
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+}
 
+.student-display-text{
+  font-weight: normal;
+}
+
+
+.student-display-container{
+  border: 1px solid rgb(24, 23, 23);
+  border-width: thick;
+  border-spacing: 0vmax;
+  width:80%;
+  margin-top: 2%;
+  padding: 1rem;
 }
