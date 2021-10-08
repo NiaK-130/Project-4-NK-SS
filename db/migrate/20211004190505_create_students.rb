@@ -5,7 +5,7 @@ class CreateStudents < ActiveRecord::Migration[6.1]
       t.string :image
       t.string :email
       t.string :home_address
-      t.integer :gpa
+      t.string :gpa
       t.string :reading_level
       t.string :writing_level
       t.string :math_level

@@ -68,7 +68,6 @@ function App() {
         {teacher ? (
           <div>
             <Switch>
-
               <Route exact path="/">
                 <Home teacher={teacher} />
               </Route>
