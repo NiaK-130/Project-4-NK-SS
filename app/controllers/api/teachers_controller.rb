@@ -1,4 +1,4 @@
-class TeachersController < ApplicationController
+class Api::TeachersController < ApplicationController
     before_action :authorize, only: [:show]
 
     def create
