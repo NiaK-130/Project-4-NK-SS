@@ -34,6 +34,17 @@ class Api::StudentsController < ApplicationController
     end
 
 
+    # body: JSON.stringify({
+    #   image: `${image}`,
+    #   name: `${name}`,
+    #   email: `${email}`,
+    #   home_address: `${homeAddress}`,
+    #   gpa: `${gpa}`,
+    #   reading_level: `${readingLevel}`,
+    #   writing_level: `${writingLevel}`,
+    #   math_level: `${mathLevel}`,
+    #   teacher_id: `${teacher.id}`
+    # }),
 
 
 

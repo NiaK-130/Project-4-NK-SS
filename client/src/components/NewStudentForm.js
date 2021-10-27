@@ -19,6 +19,8 @@ export default function NewStudentForm({teacher, addStudent}) {
     }
 
 
+
+
     return (
         <form onSubmit={handleSubmit}>
             <input type="text" name="image" placeholder="Add Student Photo..." value={image} onChange={(e) => setImage(e.target.value)} />

@@ -47,8 +47,8 @@ function AuthenticatedApp() {
         teacher_id: `${teacher.id}`
       }),
 
-
-
+      // newstudentform - image, studentName, email, homeAddress, gpa, readingLevel, writingLevel, mathLevel
+      // migration params - :name, :image, :email, :home_address, :gpa, :reading_level, :writing_level, :math_level, :teacher_id
     })
       .then((r) => r.json())
       .then(student => {
